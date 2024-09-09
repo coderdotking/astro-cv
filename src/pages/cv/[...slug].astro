@@ -1,10 +1,10 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import BlogPost from "../../layouts/BlogPost.astro";
+import CVViewLayout from "../../layouts/CVViewLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("cv");
-  return posts.map((post) => ({
+  return posts.map((post: any) => ({
     params: { slug: post.slug },
     props: post,
   }));
@@ -15,6 +15,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data}>
+<CVViewLayout {...post.data}>
   <Content />
-</BlogPost>
+</CVViewLayout>
