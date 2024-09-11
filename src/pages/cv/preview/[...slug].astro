@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import CVViewLayout from "../../../layouts/CVViewLayout.astro";
+import CVPreviewLayout from "../../../layouts/CVPreviewLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("cv");
@@ -15,6 +15,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<CVViewLayout {...post.data}>
+<CVPreviewLayout {...post.data}>
   <Content />
-</CVViewLayout>
+</CVPreviewLayout>
