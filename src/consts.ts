@@ -1,5 +1,5 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
+// 将任何全局数据放在这个文件中。
+// 您可以使用“import”关键字从站点中的任何位置导入此数据。
 
 export const SITE_TITLE = "Astro CV";
 export const SITE_DESCRIPTION = "Welcome to Astro CV!";
